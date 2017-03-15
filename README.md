@@ -7,10 +7,7 @@ Some tips and tricks I use for when using bash
   I did that several times and it was painful. These few will save you.
   
   In your profile .bashrc
-    put his line : 
-    ```alias rm='set -f;srm'; srm() { ~/scripts/safe_rm.sh "$@";set +f;}```
-    
-    [credit]( http://stackoverflow.com/questions/11456403/stop-shell-wildcard-character-expansion)
+    put his line :   ```alias rm='set -f;srm'; srm() { ~/scripts/safe_rm.sh "$@";set +f;}```
     
    And this goes in your safe_rm.sh
    
@@ -23,4 +20,7 @@ for arg in "$@"; do
 done
 rm $@
 ```
+
+Credits 
+  1. [stackoverflow]( http://stackoverflow.com/questions/11456403/stop-shell-wildcard-character-expansion)
 ---

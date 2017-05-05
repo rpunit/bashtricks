@@ -24,3 +24,8 @@ rm $@
 Credits 
   1. [stackoverflow]( http://stackoverflow.com/questions/11456403/stop-shell-wildcard-character-expansion)
 ---
+
+## 2. Which process is opening the files (on a unix like operating system)
+```
+lsof  |awk -F" " '{print $1,$2}'  |uniq -c |sort -n
+```
